@@ -1,3 +1,5 @@
+package by.epam.ayem.module4;
+
 import java.util.Random;
 
 public class StudentMain {
