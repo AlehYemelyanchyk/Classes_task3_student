@@ -1,6 +1,8 @@
-package by.epam.ayem.module4;/*3. Создайте класс с именем task3student, содержащий поля: фамилия и инициалы, намер группы, успеваемость
-(массив из пяти элементов). Создайте массив из десяти элементов такого типа. Добавьте возможность
-вывода фамилий и номеров групп студентов, имеющих оценки, равные только 9 или 10.*/
+package by.epam.ayem.module4;
+
+/*3. Создайте класс с именем task3student, содержащий поля: фамилия и инициалы, номер группы,
+успеваемость (массив из пяти элементов). Создайте массив из десяти элементов такого типа. Добавьте
+возможность вывода фамилий и номеров групп студентов, имеющих оценки, равные только 9 или 10.*/
 
 class Student {
 
@@ -8,27 +10,27 @@ class Student {
     private String groupNumber;
     private int[] performance;
 
-    String getFio() {
+    public String getFio() {
         return fio;
     }
 
-    void setFio(String fio) {
+    public void setFio(String fio) {
         this.fio = fio;
     }
 
-    String getGroupNumber() {
+    public String getGroupNumber() {
         return groupNumber;
     }
 
-    void setGroupNumber(String groupNumber) {
+    public void setGroupNumber(String groupNumber) {
         this.groupNumber = groupNumber;
     }
 
-    int[] getPerformance() {
+    public int[] getPerformance() {
         return performance;
     }
 
-    void setPerformance(int[] performance) {
+    public void setPerformance(int[] performance) {
         this.performance = performance;
     }
 }

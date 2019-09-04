@@ -1,10 +1,14 @@
 package by.epam.ayem.module4;
 
+/*3. Создайте класс с именем task3student, содержащий поля: фамилия и инициалы, номер группы,
+успеваемость (массив из пяти элементов). Создайте массив из десяти элементов такого типа. Добавьте
+возможность вывода фамилий и номеров групп студентов, имеющих оценки, равные только 9 или 10.*/
+
 import java.util.Random;
 
-public class StudentMain {
+public class StudentsBase {
 
-    public static void main(String[] args) {
+    public void run() {
 
         Student[] students = new Student[10];
         students[0] = createStudent("ASA", "1674");
@@ -21,7 +25,7 @@ public class StudentMain {
         printBestStudents(students);
     }
 
-    private static Student createStudent(String fio, String groupNumber) {
+    private Student createStudent(String fio, String groupNumber) {
 
         Student student = new Student();
 
@@ -35,18 +39,16 @@ public class StudentMain {
         return student;
     }
 
-    private static int[] fillArray(int[] array) {
+    void fillArray(int[] array) {
 
         Random random = new Random();
 
         for (int i = 0; i < array.length; i++) {
             array[i] = 8 + random.nextInt(3);
         }
-
-        return array;
     }
 
-    private static void printBestStudents(Student[] students) {
+    void printBestStudents(Student[] students) {
 
         int min = 9;
 
@@ -58,12 +60,12 @@ public class StudentMain {
             for (int grade : grades) {
                 if (grade < min) {
                     print = false;
+                    break;
                 }
             }
             if (print) {
                 System.out.println("Student " + student.getFio() + ", group #" + student.getGroupNumber());
             }
         }
-
     }
 }
