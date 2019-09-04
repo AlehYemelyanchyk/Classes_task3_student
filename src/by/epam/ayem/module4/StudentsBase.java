@@ -1,6 +1,6 @@
 package by.epam.ayem.module4;
 
-/*3. Создайте класс с именем task3student, содержащий поля: фамилия и инициалы, номер группы,
+/*3. Создайте класс с именем Student, содержащий поля: фамилия и инициалы, номер группы,
 успеваемость (массив из пяти элементов). Создайте массив из десяти элементов такого типа. Добавьте
 возможность вывода фамилий и номеров групп студентов, имеющих оценки, равные только 9 или 10.*/
 
@@ -64,7 +64,8 @@ public class StudentsBase {
                 }
             }
             if (print) {
-                System.out.println("Student " + student.getFio() + ", group #" + student.getGroupNumber());
+                System.out.println("Student " + student.getFio() + ", " +
+                        "group #" + student.getGroupNumber());
             }
         }
     }
