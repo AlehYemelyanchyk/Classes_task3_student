@@ -25,7 +25,7 @@ public class StudentsBase {
         printBestStudents(students);
     }
 
-    private Student createStudent(String fio, String groupNumber) {
+    public Student createStudent(String fio, String groupNumber) {
 
         Student student = new Student();
 
@@ -39,7 +39,7 @@ public class StudentsBase {
         return student;
     }
 
-    void fillArray(int[] array) {
+    private void fillArray(int[] array) {
 
         Random random = new Random();
 
@@ -48,7 +48,7 @@ public class StudentsBase {
         }
     }
 
-    void printBestStudents(Student[] students) {
+    public void printBestStudents(Student[] students) {
 
         int min = 9;
 
